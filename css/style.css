@@ -1,0 +1,141 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-size: 20px;
+    overflow-x: hidden;
+    color: white;
+    font-family: 'Flamenco' , cursive;
+}
+header{
+    background-image:linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.884)) ,url(../image/cafe_background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+
+}
+header .row{
+max-width: 1180px;
+margin: 0 auto;
+}
+header .logo{
+    height: 120px;
+   float: left;
+   margin-top:20px ;
+
+}
+header .main-nav{
+float: right;
+margin-top: 60px;
+
+}
+header .main-nav li{
+    display: inline-block;
+    margin-left: 40px;
+    list-style: none;
+}
+.main-nav li a{
+    padding: 5px 0;
+    color: #ffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 90%;
+    font-weight: 100;
+}
+.main-nav li a:hover{
+    border-bottom: 2px solid #bf55ec;
+}
+header .mobile-icon{
+    display: none;
+}
+/* =================== */
+header .content{
+    width: 1180px;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+header .content h1{
+    color: #ffff;
+    font-size: 240%;
+    word-spacing: 5px;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: lighter;
+}
+header .content .colorchange{
+    animation: colorchange 1s infinite;
+}
+@keyframes colorchange{
+    0%{color: red;}
+    25%{color: #bf55ec;}
+    50%{color: white;}
+    100%{color: #bf55ec;}
+}
+header .content .btn{
+    display: inline-block;
+    padding: 10px 30px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: lighter;
+    border-radius: 200px;
+    transition: .2s;
+}
+header .content .btn-order{
+background-color: transparent;
+color: #bf55ec;
+margin-right: 15px;
+border: 1px solid #bf55ec;
+}
+header .content .btn-order:hover{
+    background-color: #ffff;
+}
+header .content .btn-more{
+    background-color: transparent;
+    color: #ffff;
+    border: 1px solid #ffff;
+}
+header .content .btn-more:hover{
+    background-color: #bf55ec;
+}
+
+/* ////////Responsive queries ////////// */
+
+@media only screen and (max-width: 1180px){
+    header .content{
+        width: 100%;
+        padding: 0 2%;
+    }
+}
+@media only screen and (max-width: 998px){
+    header .content h1{
+        font-size: 200%;
+    }
+}
+@media only screen and (max-width: 768px){
+    header .content h1{
+        font-size: 180%;
+    }
+    header .main-nav{
+        display: none;
+    }
+    header .mobile-icon{
+        display: inline-block;
+        color: #ffff;
+        float: right;
+        margin-top: 30px;
+        margin-right: 20px;
+    }
+    header .main-nav{
+        float: left;
+    }
+    header .main-nav li{
+        display: block;
+        margin-top: 10px;
+    }
+}
